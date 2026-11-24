@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andini Setyaningsi - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Fonts: Chewy for thick red, Kalam for brown handwritten, Montserrat for body -->
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Kalam:wght@400;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- SVG Noise Filter for Paper Texture -->
+    <svg style="display: none;">
+        <filter id="noise">
+            <feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="3" stitchTiles="stitch"/>
+            <feColorMatrix type="matrix" values="1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 0.05 0" />
+        </filter>
+        <filter id="torn-edge">
+            <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="3" result="noise" />
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="8" xChannelSelector="R" yChannelSelector="G" />
+        </filter>
+    </svg>
+
+    <!-- Navbar / Minimal Navigation -->
+    <nav class="subtle-nav">
+        <ul>
+            <li><a href="#cover">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- PAGE 1: COVER -->
+        <section id="cover" class="cover-section">
+            <div class="cover-texture"></div>
+            
+            <div class="cover-inner">
+                <div class="corner-text top-right">INFORMATICS ENGINEERING STUDENT</div>
+                
+                <div class="notebook-scrap"></div>
+                
+                <h1 class="cover-title">portfolio</h1>
+                
+                <div class="polaroid polaroid-1">
+                    <div class="tape tape-1-top"></div>
+                    <img src="assets/bw-photo.jpg" alt="Black and white portrait" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'200\' height=\'250\'><rect width=\'200\' height=\'250\' fill=\'%23888\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'white\'>BW Photo</text></svg>'">
+                    <div class="tape tape-1-bottom"></div>
+                </div>
+                
+                <div class="polaroid polaroid-2">
+                    <div class="tape tape-2-top"></div>
+                    <img src="assets/right-photo.jpg" alt="Portrait photo" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'220\' height=\'250\'><rect width=\'220\' height=\'250\' fill=\'%23c02626\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'white\'>Right Photo</text></svg>'">
+                    <div class="tape tape-2-bottom"></div>
+                </div>
+                
+                <div class="center-cutout">
+                    <img src="assets/cutout.png" alt="Andini Setyaningsi cutout" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'300\' height=\'500\'><rect width=\'300\' height=\'500\' fill=\'transparent\'/><path d=\'M50,500 L50,200 Q150,50 250,200 L250,500 Z\' fill=\'%236b6054\'/><text x=\'150\' y=\'250\' text-anchor=\'middle\' fill=\'white\'>Cutout Photo</text></svg>'">
+                </div>
+                
+                <div class="corner-text bottom-left">ANDINI SETYANINGSI</div>
+            </div>
+        </section>
+
+                <!-- PAGE 2: WHO I AM -->
+        <section id="about" class="about-section paper-notebook">
+            <div class="about-inner container">
+                <div class="about-left">
+                    <h2 class="about-title">who i am</h2>
+                    <p class="about-text">
+                        SAYA ADALAH MAHASISWA SEMESTER 3<br>
+                        PROGRAM STUDI TEKNIK INFORMATIKA DI<br>
+                        UNIVERSITAS MUHAMMADIYAH SORONG.<br>
+                        SAYA MEMILIKI KETERTARIKAN PADA<br>
+                        ARTIFICIAL INTELLIGENCE, MACHINE<br>
+                        LEARNING, COMPUTER VISION, DAN<br>
+                        PENGEMBANGAN APLIKASI. SAYA SENANG<br>
+                        BELAJAR MELALUI PROYEK DAN PRAKTIK,<br>
+                        MULAI DARI PEMROGRAMAN, PENGOLAHAN<br>
+                        DATA, HINGGA PENERAPAN AI.
+                    </p>
+                </div>
+                
+                <div class="about-right collage-container">
+                    <img src="assets/page2/decorations/bear.png" class="sticker bear-sticker-about" alt="Bear sticker"
+                         onerror="if(!this.dataset.t){this.dataset.t='1';this.src='assets/page2/bear.png';}else if(this.dataset.t==='1'){this.dataset.t='2';this.src='assets/bear-sticker.png';}else{this.style.display='none';this.nextElementSibling.style.display='block';}">
+                    <div class="sticker bear-sticker-about fall-back" style="display:none;">🐻</div>
+                    
+                    <div class="paper-layer green-square">
+                        <img src="assets/page2/decorations/green-paper.png" alt="" class="paper-layer-img" onerror="if(!this.dataset.t){this.dataset.t='1';this.src='assets/page2/green-paper.png';}else{this.style.display='none';}">
+                    </div>
+                    <div class="paper-layer yellow-wavy">
+                        <img src="assets/page2/decorations/yellow-paper.png" alt="" class="paper-layer-img" onerror="if(!this.dataset.t){this.dataset.t='1';this.src='assets/page2/yellow-paper.png';}else{this.style.display='none';}">
+                    </div>
+                    
+                    <div class="polaroid polaroid-3">
+                        <img src="assets/about-photo-1.jpg" alt="Andini holding phone" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'200\' height=\'250\'><rect width=\'200\' height=\'250\' fill=\'%23555\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'white\'>Photo 1</text></svg>'">
+                    </div>
+                    
+                    <div class="polaroid polaroid-4">
+                        <img src="assets/about-photo-2.jpg" alt="Andini red background" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'200\' height=\'250\'><rect width=\'200\' height=\'250\' fill=\'%23c02626\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'white\'>Photo 2</text></svg>'">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 3: PERSONAL SKILLS -->
+        <section id="skills" class="skills-section paper-newspaper-bg">
+            <div class="skills-inner container">
+                <div class="skills-left-col">
+                    <h2 class="skills-title">Personal<br>Skills</h2>
+                </div>
+                
+                <div class="skills-right-col">
+                    <div class="skills-panel torn-edge-panel">
+                        <h3 class="skills-subtitle">Soft Skills</h3>
+                        <hr class="skills-divider">
+                        
+                        <div class="soft-skills-grid">
+                            <span>Problem Solving</span>
+                            <span>Teamwork</span>
+                            <span>Communication</span>
+                            <span>Responsibility</span>
+                            <span>Adaptability</span>
+                            <span>Time Management</span>
+                        </div>
+                        
+                        <h3 class="skills-subtitle mt-xl">Hard Skills</h3>
+                        <hr class="skills-divider">
+                        
+                        <div class="hard-skills-icons">
+                            <img src="assets/page3/icons/icon-word.png" alt="Word" class="skill-icon" onerror="this.outerHTML='<div class=\'skill-icon-fb badge-blue\'>W</div>'">
+                            <img src="assets/page3/icons/icon-excel.png" alt="Excel" class="skill-icon" onerror="this.outerHTML='<div class=\'skill-icon-fb badge-green\'>X</div>'">
+                            <img src="assets/page3/icons/icon-ppt.png" alt="PowerPoint" class="skill-icon" onerror="this.outerHTML='<div class=\'skill-icon-fb badge-red\'>P</div>'">
+                            <img src="assets/page3/icons/icon-vscode.png" alt="VS Code" class="skill-icon" onerror="this.outerHTML='<div class=\'skill-icon-fb badge-blue-outline\'>VS</div>'">
+                            <img src="assets/page3/icons/icon-python.png" alt="Python" class="skill-icon" onerror="this.outerHTML='<div class=\'skill-icon-fb badge-yellow\'>Py</div>'">
+                            <img src="assets/page3/icons/icon-java.png" alt="Java" class="skill-icon" onerror="this.outerHTML='<div class=\'skill-icon-fb badge-orange\'>Java</div>'">
+                            <img src="assets/page3/icons/icon-android.png" alt="Android Studio" class="skill-icon" onerror="this.outerHTML='<div class=\'skill-icon-fb badge-green-light\'>And</div>'">
+                            <img src="assets/page3/icons/icon-git.png" alt="Git" class="skill-icon" onerror="this.outerHTML='<div class=\'skill-icon-fb badge-dark\'>Git</div>'">
+                            <img src="assets/page3/icons/icon-canva.png" alt="Canva" class="skill-icon mt-sm" onerror="this.outerHTML='<div class=\'skill-icon-fb badge-teal mt-sm\'>Canva</div>'">
+                            <img src="assets/page3/icons/icon-capcut.png" alt="CapCut" class="skill-icon mt-sm" onerror="this.outerHTML='<div class=\'skill-icon-fb badge-black mt-sm\'>CC</div>'">
+                            <img src="assets/page3/icons/icon-figma.png" alt="Figma" class="skill-icon mt-sm" onerror="this.outerHTML='<div class=\'skill-icon-fb badge-pink mt-sm\'>Fig</div>'">
+                            <img src="assets/page3/icons/icon-colab.png" alt="Google Colab" class="skill-icon mt-sm" onerror="this.outerHTML='<div class=\'skill-icon-fb badge-orange-light mt-sm\'>Colab</div>'">
+                            <img src="assets/page3/icons/icon-notion.png" alt="Notion" class="skill-icon mt-sm" onerror="this.outerHTML='<div class=\'skill-icon-fb badge-dark mt-sm\'>N</div>'">
+                            <img src="assets/page3/icons/icon-other.png" alt="Other Tool" class="skill-icon mt-sm" onerror="this.outerHTML='<div class=\'skill-icon-fb badge-purple mt-sm\'>O</div>'">
+                        </div>
+                        
+                        <img src="assets/page3/decorations/decoration.png" class="sticker cat-sticker-panel" alt="Scrapbook decoration"
+                             onerror="if(!this.dataset.t){this.dataset.t='1';this.src='assets/page3/decoration.png';}else{this.style.display='none';this.nextElementSibling.style.display='block';}">
+                        <div class="sticker cat-sticker-panel fall-back" style="display:none;">🐱</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 4: EXPERIENCE -->
+        <section id="experience" class="experience-section crumpled-paper-bg">
+            <div class="experience-notebook">
+                <img src="assets/page4/decorations/bow.png" class="sticker bow-sticker" alt="Bow decoration"
+                     onerror="if(!this.dataset.t){this.dataset.t='1';this.src='assets/page4/bow.png';}else{this.style.display='none';this.nextElementSibling.style.display='block';}">
+                <div class="sticker bow-sticker fall-back" style="display:none;">🎀</div>
+                
+                <h2 class="experience-title">EXPERIENCE</h2>
+                
+                <div class="experience-content-cols">
+                    <!-- LEFT COLUMN -->
+                    <div class="exp-col exp-left">
+                        <div class="exp-role-row">
+                            <span class="exp-check">&#9745;</span>
+                            <h3 class="exp-role">Laboratory Assistant</h3>
+                        </div>
+                        <p class="exp-meta">
+                            Hardware &amp; Networking Laboratory<br>
+                            Universitas Muhammadiyah Sorong
+                        </p>
+                        <p class="exp-year">2026-Present</p>
+                        <p class="exp-desc">
+                            Supporting practical sessions,<br>
+                            assisting students, preparing<br>
+                            laboratory activities, and<br>
+                            coordinating with lecturers and<br>
+                            fellow assistants.
+                        </p>
+                    </div>
+                    
+                    <!-- RIGHT COLUMN -->
+                    <div class="exp-col exp-right">
+                        <div class="exp-role-row">
+                            <span class="exp-check">&#9745;</span>
+                            <h3 class="exp-role">Public Relations Committee</h3>
+                        </div>
+                        <p class="exp-meta">
+                            Hufest &mdash; HIMATIF Unamin Festival
+                        </p>
+                        <p class="exp-year mt-fix">2026</p>
+                        <p class="exp-desc">
+                            Handling correspondence<br>
+                            and administrative<br>
+                            communication for talents,<br>
+                            schools, and committee<br>
+                            members.
+                        </p>
+                    </div>
+                </div>
+                
+                <img src="assets/page4/decorations/star.png" class="sticker paper-deco" alt="Scrapbook decoration"
+                     onerror="if(!this.dataset.t){this.dataset.t='1';this.src='assets/page4/decorations/decoration.png';}else if(this.dataset.t==='1'){this.dataset.t='2';this.src='assets/page4/decoration.png';}else{this.style.display='none';this.nextElementSibling.style.display='block';}">
+                <div class="sticker paper-deco fall-back" style="display:none;">⭐</div>
+            </div>
+        </section>
+<!-- PAGE 5: FEATURED PROJECT -->
+        <section id="projects" class="project-section crumpled-paper-bg">
+            <div class="project-inner container">
+                <span class="project-year">2026</span>
+
+                <div class="project-left-col">
+                    <h2 class="project-heading">
+                        <span class="project-featured">FEATURED</span><br>
+                        <span class="project-word">PROJECT</span>
+                    </h2>
+
+                    <div class="project-label-row">
+                        <span class="project-capsule">Kangkung Detector</span>
+                        <span class="project-tech">YOLOv12 &middot; Computer<br>Vision &middot; Android</span>
+                    </div>
+
+                    <p class="project-desc">
+                        An Android application that uses the YOLOv12 object
+                        detection algorithm to identify the harvest readiness of cut
+                        kangkung in real time through a smartphone camera. The
+                        application detects and classifies kangkung as &ldquo;ready to
+                        harvest&rdquo; or &ldquo;not ready to harvest&rdquo; using bounding boxes,
+                        providing a practical and fast way to assist in determining
+                        harvest readiness.
+                    </p>
+
+                    <div class="project-stats">
+                        <span>3,556 Images</span>
+                        <span>100 Epochs</span>
+                        <span>0.914 mAP50</span>
+                    </div>
+
+                    <a href="https://github.com/Kelompok17B/Implementasi-YOLOv12-untuk-Deteksi-Kesiapan-Panen-Kangkung-Berbasis-Android.git"
+                       target="_blank" class="project-link">View Project &rarr;</a>
+                </div>
+
+                <div class="project-right-col">
+                    <img src="assets/page5/decorations/whale.png" class="sticker whale-deco" alt="Whale decoration"
+                         onerror="if(!this.dataset.t){this.dataset.t='1';this.src='assets/page5/whale.png';}else{this.style.display='none';this.nextElementSibling.style.display='block';}">
+                    <div class="sticker whale-deco fall-back" style="display:none;">🐋</div>
+
+                    <div class="project-torn-frame">
+                        <img src="assets/page5/kangkung-detector.png"
+                             alt="Kangkung Detector app screenshot"
+                             class="project-img"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                        <div class="project-img-missing" style="display:none;">
+                            &#x26A0;&#xFE0F; Missing: assets/page5/kangkung-detector.png
+                        </div>
+                    </div>
+
+                    <img src="assets/page5/decorations/collage-bottom.png" class="sticker collage-bottom-deco" alt="Collage decoration"
+                         onerror="if(!this.dataset.t){this.dataset.t='1';this.src='assets/page5/collage-bottom.png';}else if(this.dataset.t==='1'){this.dataset.t='2';this.src='assets/page5/collage.png';}else{this.style.display='none';this.nextElementSibling.style.display='block';}">
+                    <div class="sticker collage-bottom-deco fall-back" style="display:none;">📰</div>
+
+                    <img src="assets/page5/decorations/heart.png" class="sticker heart-deco" alt="Pink heart decoration"
+                         onerror="if(!this.dataset.t){this.dataset.t='1';this.src='assets/page5/heart.png';}else{this.style.display='none';this.nextElementSibling.style.display='block';}">
+                    <div class="sticker heart-deco fall-back" style="display:none;">💗</div>
+                </div>
+            </div>
+        </section>
+        <!-- PAGE 6: RESEARCH & PUBLICATION -->
+        <section id="research" class="research-section">
+            <!-- crumpled paper SVG background same as other pages -->
+            <div class="research-bg-layer"></div>
+
+            <div class="research-inner">
+
+                <!-- "2026" top-right, always on top -->
+                <div class="research-year">2026</div>
+
+                <!-- Whale top-right, below 2026 -->
+                <div class="research-whale-wrap">
+                    <img src="assets/research/whale.png" alt="" class="research-whale-img"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <span class="research-whale-fb" style="display:none;">🐋</span>
+                </div>
+
+                <!-- LEFT COLUMN -->
+                <div class="research-left-col">
+
+                    <!-- Big charcoal "RESEARCH" handwritten title -->
+                    <h2 class="research-main-title">RESEARCH</h2>
+
+                    <!-- Rounded capsule badge -->
+                    <div class="research-badge">Research &amp; Publication</div>
+
+                    <!-- Paper title (bold, dark) -->
+                    <h3 class="research-paper-title">Implementasi Algoritma YOLOv12 untuk Deteksi Tingkat Kesiapan Panen Kangkung Potong Secara Realtime Berbasis Android</h3>
+
+                    <!-- Journal name -->
+                    <p class="research-journal">Insect &mdash; Jurnal Teknik Informatika</p>
+
+                    <!-- Description -->
+                    <p class="research-desc">Research on implementing YOLOv12 for real-time kangkung harvest readiness detection on Android.</p>
+
+                    <!-- Stats -->
+                    <div class="research-stats">
+                        <div>mAP50 &mdash; 0.914</div>
+                        <div>Recall &mdash; 0.888</div>
+                        <div>Precision &mdash; 0.841</div>
+                    </div>
+
+                    <!-- Read Research link -->
+                    <a href="https://doi.org/10.33506/insect.v12i2.5910" target="_blank" class="research-link">Read Research &rarr;</a>
+                </div>
+
+                <!-- RIGHT COLUMN — torn-paper journal image panel -->
+                <div class="research-right-col">
+
+                    <!-- Torn paper frame containing journal image -->
+                    <div class="research-torn-frame">
+                        <img src="assets/research/journal.png" alt="INSECT Journal Page"
+                             class="research-journal-img"
+                             onerror="if(!this.dataset.tried){this.dataset.tried='1'; this.src='assets/research/journal.jpg';} else {this.style.display='none'; this.nextElementSibling.style.display='flex';}">
+                        <div class="research-journal-missing" style="display:none;">INSECT<br>Jurnal Teknik Informatika</div>
+                    </div>
+
+                    <!-- Collage sticker bottom-left of panel -->
+                    <div class="research-collage-deco">
+                        <img src="assets/research/collage.png" alt="" class="research-collage-img"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="research-collage-fb" style="display:none;">📰</span>
+                    </div>
+
+                    <!-- Pink heart lower-right -->
+                    <div class="research-heart-wrap">
+                        <img src="assets/research/heart.png" alt="" class="research-heart-img"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="research-heart-fb" style="display:none;">💗</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- PAGE 7: PROJECT PROCESS -->
+        <section id="process" class="section paper-notebook process-section">
+            <div class="process-notebook">
+                <img src="assets/page7/decorations/bow.png" class="sticker process-bow" alt="Bow decoration"
+                     onerror="if(!this.dataset.t){this.dataset.t='1';this.src='assets/page4/decorations/bow.png';}else if(this.dataset.t==='1'){this.dataset.t='2';this.src='assets/page4/bow.png';}else{this.style.display='none';this.nextElementSibling.style.display='block';}">
+                <div class="sticker process-bow fall-back" style="display:none;">🎀</div>
+                
+                <h2 class="brown-hand-title center-text process-heading">PROJECT PROCESS</h2>
+                
+                <div class="process-cards-container">
+                    <div class="process-line"></div>
+                    
+                    <div class="process-card">
+                        <div class="process-num">01</div>
+                        <div class="process-icon">🎯</div>
+                        <h4 class="process-title">Problem &amp; Goal</h4>
+                        <p class="process-desc">Define the need to detect harvest readiness of cut kangkung</p>
+                    </div>
+                    
+                    <div class="process-card">
+                        <div class="process-num">02</div>
+                        <div class="process-icon">📁</div>
+                        <h4 class="process-title">Dataset Preparation</h4>
+                        <p class="process-desc">Collect, label, balance, and split kangkung images</p>
+                    </div>
+                    
+                    <div class="process-card">
+                        <div class="process-num">03</div>
+                        <div class="process-icon">⚙️</div>
+                        <h4 class="process-title">Model Training</h4>
+                        <p class="process-desc">Train YOLOv12s for object detection and evaluate performance</p>
+                    </div>
+                    
+                    <div class="process-card">
+                        <div class="process-num">04</div>
+                        <div class="process-icon">📱</div>
+                        <h4 class="process-title">Android Integration</h4>
+                        <p class="process-desc">Export model to ONNX and integrate into Android camera app</p>
+                    </div>
+                    
+                    <div class="process-card">
+                        <div class="process-num">05</div>
+                        <div class="process-icon">🔍</div>
+                        <h4 class="process-title">Testing &amp; Result</h4>
+                        <p class="process-desc">Test real-time detection and review bounding boxes and predictions</p>
+                    </div>
+                </div>
+
+                <img src="assets/page7/decorations/star.png" class="sticker process-star" alt="Star decoration"
+                     onerror="if(!this.dataset.t){this.dataset.t='1';this.src='assets/page4/decorations/star.png';}else if(this.dataset.t==='1'){this.dataset.t='2';this.src='assets/page4/decoration.png';}else{this.style.display='none';this.nextElementSibling.style.display='block';}">
+                <div class="sticker process-star fall-back" style="display:none;">⭐</div>
+            </div>
+        </section>
+
+        <!-- PAGE 8: ACADEMIC PROJECT -->
+        <section id="academic" class="acad-section">
+
+            <!-- ── UPPER-LEFT THUMBNAIL COLLAGE ── -->
+            <div class="acad-thumb-upper">
+
+                <!-- thumb-1: back-left, rotated CCW -->
+                <div class="acad-card acad-card-1">
+                    <img src="assets/academic/thumbnails/thumb-1.png"
+                         alt="Aturan Pembuatan Variabel"
+                         class="acad-thumb-img"
+                         onerror="if(!this.dataset.t){this.dataset.t='1';this.src='assets/academic/thumbnails/thumbnail-1.png';}else{this.style.display='none';this.nextElementSibling.style.display='flex';}">
+                    <div class="acad-thumb-fallback" style="display:none;">Aturan Pembuatan Variabel</div>
+                </div>
+
+                <!-- thumb-2: middle, slightly rotated CW -->
+                <div class="acad-card acad-card-2">
+                    <img src="assets/academic/thumbnails/thumb-2.png"
+                         alt="ARU Firebase Type Dictionary"
+                         class="acad-thumb-img"
+                         onerror="if(!this.dataset.t){this.dataset.t='1';this.src='assets/academic/thumbnails/thumbnail-2.png';}else{this.style.display='none';this.nextElementSibling.style.display='flex';}">
+                    <div class="acad-thumb-fallback" style="display:none;">ARU Firebase Type Dictionary</div>
+                </div>
+
+                <!-- thumb-3: front-center, nearly straight -->
+                <div class="acad-card acad-card-3">
+                    <img src="assets/academic/thumbnails/thumb-3.png"
+                         alt="Operasi List Dengan Python"
+                         class="acad-thumb-img"
+                         onerror="if(!this.dataset.t){this.dataset.t='1';this.src='assets/academic/thumbnails/thumbnail-3.png';}else{this.style.display='none';this.nextElementSibling.style.display='flex';}">
+                    <div class="acad-thumb-fallback" style="display:none;">Operasi List Dengan Python</div>
+                </div>
+            </div>
+
+            <!-- ── TOP-RIGHT TEXT BLOCK ── -->
+            <div class="acad-text-block">
+                <p class="acad-label">DATA STRUCTURE &mdash; TEAM VIDEO PROJECT</p>
+                <p class="acad-description">A COLLABORATIVE PROJECT WHERE OUR TEAM CREATED FIVE EDUCATIONAL VIDEOS EXPLAINING AND PRESENTING DIFFERENT DATA STRUCTURE ASSIGNMENTS.</p>
+                <p class="acad-meta">TEAM PROJECT &middot; 5 VIDEOS &middot; DATA STRUCTURES</p>
+            </div>
+
+            <!-- ── BOTTOM-LEFT LARGE TITLE ── -->
+            <div class="acad-title-block">
+                <h2 class="acad-title-academic">ACADEMIC</h2>
+                <h2 class="acad-title-project">PROJECT</h2>
+            </div>
+
+            <!-- ── BOTTOM-RIGHT COLLAGE AREA ── -->
+            <div class="acad-lower-right">
+
+                <!-- Blue torn-paper layer behind thumbnails -->
+                <div class="acad-blue-paper">
+                    <div class="acad-blue-paper-inner"></div>
+                </div>
+
+                <!-- Newspaper/collage scrap decoration -->
+                <div class="acad-newspaper-scrap">
+                    <img src="assets/academic/decorations/newspaper-scrap.png"
+                         alt="" class="acad-deco-img"
+                         onerror="this.style.display='none';">
+                </div>
+
+                <!-- thumb-4: upper in lower-right collage -->
+                <div class="acad-card acad-card-4">
+                    <img src="assets/academic/thumbnails/thumb-4.png"
+                         alt="Olah Array Berlapis"
+                         class="acad-thumb-img"
+                         onerror="if(!this.dataset.t){this.dataset.t='1';this.src='assets/academic/thumbnails/thumbnail-4.png';}else{this.style.display='none';this.nextElementSibling.style.display='flex';}">
+                    <div class="acad-thumb-fallback" style="display:none;">Olah Array Berlapis</div>
+                </div>
+
+                <!-- thumb-5: lower in lower-right collage -->
+                <div class="acad-card acad-card-5">
+                    <img src="assets/academic/thumbnails/thumb-5.png"
+                         alt="Implementasi Relasi Data Firebase"
+                         class="acad-thumb-img"
+                         onerror="if(!this.dataset.t){this.dataset.t='1';this.src='assets/academic/thumbnails/thumbnail-5.png';}else{this.style.display='none';this.nextElementSibling.style.display='flex';}">
+                    <div class="acad-thumb-fallback" style="display:none;">Implementasi Relasi Data Firebase</div>
+                </div>
+
+                <!-- Rooster illustration (right edge) -->
+                <div class="acad-rooster-wrap">
+                    <img src="assets/academic/decorations/rooster.png"
+                         alt="" class="acad-rooster-img"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <span class="acad-rooster-fb" style="display:none;">🐓</span>
+                </div>
+
+                <!-- Botanical/leaf decoration -->
+                <div class="acad-leaf-wrap">
+                    <img src="assets/academic/decorations/leaf.png"
+                         alt="" class="acad-deco-img"
+                         onerror="this.style.display='none';">
+                </div>
+
+                <!-- Pencil/small decorative object -->
+                <div class="acad-pencil-wrap">
+                    <img src="assets/academic/decorations/pencil.png"
+                         alt="" class="acad-deco-img"
+                         onerror="this.style.display='none';">
+                </div>
+            </div>
+
+        </section>
+        <!-- PAGE 9 & 10: ACTIVITIES & ACHIEVEMENTS -->
+        <section id="activities" class="section paper-yellow">
+            <div class="texture-overlay"></div>
+            <div class="notebook-lines-overlay"></div>
+            <div class="container activities-container">
+                <h2 class="white-hand-title">ACTIVITIES &<br>ACHIEVEMENTS <span class="yellow-star"><img src="assets/activities/decorations/yellow-star.png" alt="★" class="yellow-star-img" onerror="if(!this.dataset.t){this.dataset.t='1';this.src='assets/activities/decorations/star.png';}else{this.style.display='none';this.nextElementSibling.style.display='inline-block';}"><span class="yellow-star-symbol" style="display:none;">★</span></span></h2>
+                
+                <div class="activities-flex">
+                    <div class="activities-list">
+                        <div class="activity-item">
+                            <div class="activity-title-row">
+                                <h3 class="brown-subtitle">MARCHING BAND</h3>
+                                <img src="assets/activities/marching-band.png" alt="Marching Band" class="marching-band-img" onerror="this.outerHTML='<div class=\'marching-band-img fall-back\'>🥁🎺</div>'">
+                            </div>
+                            <p class="tech-labels">EQUIPMENT DIVISION · 2 PERIODS · HIGH SCHOOL</p>
+                            <p class="body-text">MENJADI ANGGOTA DIVISI ALAT SELAMA DUA PERIODE DALAM KEGIATAN MARCHING BAND.</p>
+                        </div>
+                        
+                        <div class="activity-item">
+                            <h3 class="brown-subtitle">AI IGNITION TRAINING 🤖</h3>
+                            <p class="body-text">PARTICIPATED IN AI IGNITION TRAINING TO DEEPEN MY UNDERSTANDING OF ARTIFICIAL INTELLIGENCE AND ITS PRACTICAL APPLICATIONS.</p>
+                        </div>
+                        
+                        <div class="activity-item">
+                            <h3 class="brown-subtitle">AI FOR OCEANS — HOUR OF CODE 💻</h3>
+                            <p class="body-text">COMPLETED AN INTRODUCTORY AI AND COMPUTER SCIENCE LEARNING ACTIVITY THROUGH CODE.ORG'S AI FOR OCEANS PROGRAM.</p>
+                        </div>
+                        
+                        <div class="activity-item">
+                            <h3 class="brown-subtitle">OLIMETIK UNAMIN 🏆</h3>
+                            <p class="body-text">PARTICIPATED IN THE OLIMETIK UNAMIN COMPETITION AND GAINED EXPERIENCE IN ACADEMIC PROBLEM-SOLVING.</p>
+                        </div>
+                        
+                        <div class="activity-item">
+                            <h3 class="brown-subtitle">BUSINESS PLAN COMPETITION 💡</h3>
+                            <p class="body-text">LEARNED THE FUNDAMENTALS OF DEVELOPING AND PRESENTING A BUSINESS MODEL USING THE BUSINESS MODEL CANVAS.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="certificates-collage">
+                        <!-- 1. AI Ignition Participation (Top-Left) -->
+                        <div class="cert-card cert-pos-1">
+                            <img src="assets/activities/certificates/cert-1.png" alt="Certificate 1 - AI Ignition Training" class="cert-img" onerror="if(!this.dataset.tried){this.dataset.tried='1'; this.src='assets/activities/certificates/certificate-1.png';} else {this.style.display='none'; this.nextElementSibling.style.display='flex';}">
+                            <div class="cert-fallback"><span class="cert-fb-title">Certificate 1</span><span class="cert-fb-sub">AI Ignition</span></div>
+                        </div>
+
+                        <!-- 2. Marching Band Juara 1 (Top-Center) -->
+                        <div class="cert-card cert-pos-2">
+                            <img src="assets/activities/certificates/cert-2.png" alt="Certificate 2 - Marching Band Juara 1" class="cert-img" onerror="if(!this.dataset.tried){this.dataset.tried='1'; this.src='assets/activities/certificates/certificate-2.png';} else {this.style.display='none'; this.nextElementSibling.style.display='flex';}">
+                            <div class="cert-fallback"><span class="cert-fb-title">Certificate 2</span><span class="cert-fb-sub">Juara 1 MB</span></div>
+                        </div>
+
+                        <!-- 3. Marching Band Sie Konsumsi (Top-Right) -->
+                        <div class="cert-card cert-pos-3">
+                            <img src="assets/activities/certificates/cert-3.png" alt="Certificate 3 - Marching Band Sie Konsumsi" class="cert-img" onerror="if(!this.dataset.tried){this.dataset.tried='1'; this.src='assets/activities/certificates/certificate-3.png';} else {this.style.display='none'; this.nextElementSibling.style.display='flex';}">
+                            <div class="cert-fallback"><span class="cert-fb-title">Certificate 3</span><span class="cert-fb-sub">Sie Konsumsi</span></div>
+                        </div>
+
+                        <!-- 4. Training Module Details (Mid-Left) -->
+                        <div class="cert-card cert-pos-4">
+                            <img src="assets/activities/certificates/cert-4.png" alt="Certificate 4 - Module Details" class="cert-img" onerror="if(!this.dataset.tried){this.dataset.tried='1'; this.src='assets/activities/certificates/certificate-4.png';} else {this.style.display='none'; this.nextElementSibling.style.display='flex';}">
+                            <div class="cert-fallback"><span class="cert-fb-title">Certificate 4</span><span class="cert-fb-sub">Module Details</span></div>
+                        </div>
+
+                        <!-- 5. Marching Band Bendahara (Mid-Center) -->
+                        <div class="cert-card cert-pos-5">
+                            <img src="assets/activities/certificates/cert-5.png" alt="Certificate 5 - Bendahara Seminar" class="cert-img" onerror="if(!this.dataset.tried){this.dataset.tried='1'; this.src='assets/activities/certificates/certificate-5.png';} else {this.style.display='none'; this.nextElementSibling.style.display='flex';}">
+                            <div class="cert-fallback"><span class="cert-fb-title">Certificate 5</span><span class="cert-fb-sub">Bendahara MB</span></div>
+                        </div>
+
+                        <!-- 6. Gita Bahana Nusantara Peserta (Mid-Right) -->
+                        <div class="cert-card cert-pos-6">
+                            <img src="assets/activities/certificates/cert-6.png" alt="Certificate 6 - Gita Bahana Nusantara" class="cert-img" onerror="if(!this.dataset.tried){this.dataset.tried='1'; this.src='assets/activities/certificates/certificate-6.png';} else {this.style.display='none'; this.nextElementSibling.style.display='flex';}">
+                            <div class="cert-fallback"><span class="cert-fb-title">Certificate 6</span><span class="cert-fb-sub">Peserta MB</span></div>
+                        </div>
+
+                        <!-- 7. Olimetik Unamin (Bottom-Left) -->
+                        <div class="cert-card cert-pos-7">
+                            <img src="assets/activities/certificates/cert-7.png" alt="Certificate 7 - Olimetik Unamin" class="cert-img" onerror="if(!this.dataset.tried){this.dataset.tried='1'; this.src='assets/activities/certificates/certificate-7.png';} else {this.style.display='none'; this.nextElementSibling.style.display='flex';}">
+                            <div class="cert-fallback"><span class="cert-fb-title">Certificate 7</span><span class="cert-fb-sub">Olimetik 2024</span></div>
+                        </div>
+
+                        <!-- 8. CoolCurrent BMC IDP (Foreground Center) -->
+                        <div class="cert-card cert-pos-8">
+                            <img src="assets/activities/certificates/cert-8.png" alt="Certificate 8 - CoolCurrent BMC" class="cert-img" onerror="if(!this.dataset.tried){this.dataset.tried='1'; this.src='assets/activities/certificates/certificate-8.png';} else {this.style.display='none'; this.nextElementSibling.style.display='flex';}">
+                            <div class="cert-fallback"><span class="cert-fb-title">Certificate 8</span><span class="cert-fb-sub">CoolCurrent BMC</span></div>
+                        </div>
+
+                        <!-- 9. Hour of Code AI for Oceans (Bottom-Right) -->
+                        <div class="cert-card cert-pos-9">
+                            <img src="assets/activities/certificates/cert-9.png" alt="Certificate 9 - Hour of Code AI for Oceans" class="cert-img" onerror="if(!this.dataset.tried){this.dataset.tried='1'; this.src='assets/activities/certificates/certificate-9.png';} else {this.style.display='none'; this.nextElementSibling.style.display='flex';}">
+                            <div class="cert-fallback"><span class="cert-fb-title">Certificate 9</span><span class="cert-fb-sub">AI for Oceans</span></div>
+                        </div>
+                        <!-- 10. Certificate MTQ (Far Bottom-Right) -->
+                        <div class="cert-card cert-pos-10">
+                            <img src="assets/activities/certificates/cert-10.png" alt="Certificate MTQ" class="cert-img" onerror="if(!this.dataset.tried){this.dataset.tried='1'; this.src='assets/activities/certificates/certificate-10.png';} else {this.style.display='none'; this.nextElementSibling.style.display='flex';}">
+                            <div class="cert-fallback"><span class="cert-fb-title">Certificate 10</span><span class="cert-fb-sub">MTQ</span></div>
+                        </div>
+</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 11: LET'S CONNECT -->
+        <section id="contact" class="connect-section">
+            <div class="connect-split-bg">
+                <div class="connect-bg-left"></div>
+                <div class="connect-bg-right"></div>
+                <div class="connect-torn-seam"></div>
+            </div>
+
+            <div class="connect-container">
+                <!-- LEFT: Cut-out portrait on cream crumpled paper -->
+                <div class="connect-left-col">
+                    <div class="connect-cutout-wrap">
+                        <img src="assets/cutout.png" alt="Andini Setyaningsi portrait" class="connect-cutout-img" onerror="this.style.display='none'">
+                    </div>
+                </div>
+
+                <!-- RIGHT: Ruled notebook paper with title and contact info -->
+                <div class="connect-right-col">
+                    <!-- Red bow decoration safely to the upper-left of the title -->
+                    <img src="assets/page11/decorations/bow.png" class="sticker connect-bow" alt="Red bow decoration"
+                         onerror="this.outerHTML='<div class=\'sticker connect-bow fall-back\'>🎀</div>'">
+
+                    <!-- Title on the upper-right -->
+                    <h2 class="connect-title">LET’S<br>CONNECT</h2>
+
+                    <!-- Contact area -->
+                    <div class="connect-list-wrapper">
+                        <ul class="connect-list">
+                            <li>
+                                <span class="contact-icon-badge">📞</span>
+                                <a href="tel:+6281248046231" class="contact-link">+62 812 4804 6231</a>
+                            </li>
+                            <li>
+                                <span class="contact-icon-badge">🐱</span>
+                                <a href="https://github.com/andinisetyaningsi" target="_blank" rel="noopener noreferrer" class="contact-link">andinisetyaningsi</a>
+                            </li>
+                            <li>
+                                <span class="contact-icon-badge">✉️</span>
+                                <a href="mailto:andiniiiidini19@gmail.com" class="contact-link">andiniiiidini19@gmail.com</a>
+                            </li>
+                            <li>
+                                <span class="contact-icon-badge">📷</span>
+                                <a href="https://instagram.com/dinimrrk" target="_blank" rel="noopener noreferrer" class="contact-link">dinimrrk</a>
+                            </li>
+                        </ul>
+
+                        <!-- Right-side musical / scrapbook decoration -->
+                        <img src="assets/page11/decorations/illustration.png" class="sticker connect-music-deco" alt="Scrapbook decoration"
+                             onerror="this.outerHTML='<div class=\'sticker connect-music-deco fall-back\'>🎶</div>'">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 12: THANK YOU -->
+        <section id="thankyou" class="ty-section">
+            <div class="ty-split-bg">
+                <div class="ty-bg-left"></div>
+                <div class="ty-bg-right"></div>
+                <div class="ty-torn-seam"></div>
+            </div>
+
+            <div class="ty-container">
+                <!-- LEFT: Cut-out portrait on brown/tan paper -->
+                <div class="ty-left-col">
+                    <div class="ty-cutout-wrap">
+                        <img src="assets/cutout.png" alt="Andini Setyaningsi portrait" class="ty-cutout-img" onerror="this.style.display='none'">
+                    </div>
+                </div>
+
+                <!-- Fish decoration near upper center / paper division, strictly clear of the title -->
+                <img src="assets/page12/decorations/fish.png" class="sticker ty-fish-deco" alt="Fish decoration"
+                     onerror="this.outerHTML='<div class=\'sticker ty-fish-deco fall-back\'>🐟</div>'">
+
+                <!-- RIGHT: Content on cream paper -->
+                <div class="ty-right-col">
+                    <h2 class="ty-title">THANK<br>YOU</h2>
+
+                    <p class="ty-description">
+                        THANK YOU FOR TAKING THE TIME TO EXPLORE<br>
+                        MY JOURNEY, PROJECTS, AND EXPERIENCES.<br>
+                        LET’S CONNECT AND CREATE SOMETHING<br>
+                        MEANINGFUL.
+                    </p>
+
+                    <div class="ty-signature">
+                        <p class="ty-sig-name">ANDINI SETYANINGSI</p>
+                        <p class="ty-sig-role">INFORMATICS ENGINEERING STUDENT</p>
+                        <p class="ty-sig-campus">UNIVERSITAS MUHAMMADIYAH SORONG</p>
+                    </div>
+
+                    <!-- Green frog scrapbook decoration in bottom-right -->
+                    <img src="assets/page12/decorations/frog.png" class="sticker ty-frog-deco" alt="Frog decoration"
+                         onerror="this.outerHTML='<div class=\'sticker ty-frog-deco fall-back\'>🐸</div>'">
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
